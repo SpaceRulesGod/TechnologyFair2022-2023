@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    
+      <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    
+      <link rel="stylesheet" type="text/css" href="style.css">
+    
+    
+    </head>
+<body>
+    <center>
+        <!--Title & Button-->
+        <div class="heading">
+            <h1 class="title">Web App Surviellance
+            <button class="instructions" data-toggle="modal" data-target="#myModal">Instructions</button>
+            </h1>
+        </div>
+        
+        <div>
+            <input class="input"type="search" id="locator" name="locator" placeholder="Enter object you are trying to indetify"/>
+            <br>
+            <div id="search_results"></div>
+        </div>
+                <!--Main Body-->
+                <section id="intro">
+                    <h1></h1>
+                    <div class="page-header" id="camera_top">
+                        <h2 class="text-capitalize">View port</h2>
+                        <label for="fname">Camera ID:</label>
+                        <button id="status">Status: No Objects Found</button>
+                    </div>
+
+         <!--Popup Instructions-->
+         <div id="myModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <button class="close" data-dismiss="modal">&times;</button>
+                    <h3 id="start">Instructions</h3>
+                    </div>     
+
+
+                    <div class="modal-body">
+                        <li>First keep your laptop screen straight</li>
+                        <li>Make sure you're in a room with a blank background to improve accuracy</li>
+                        <li>Move yourself approximately 1 foot away from the laptop</li>
+                        <li>Move objects until the computer detects it, then have your object stay still</li>
+                        <li>Using the input box you can search up objects that must have the right keyword from the model</li>
+                        <li>Press Enter once you have written your keyword in the input box</li>
+                        <li>Using this application, you can find out what time your object was last found</li>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--Canvas-->
+        <div id="printName" class="printName">Name:</div>
+    <section id="canvas">
+
+    </section>
+    </center>     
+    <script src="main.js"></script>   
+</body>
+</html>
